@@ -28,9 +28,9 @@ class Counters extends Component {
   };
 
   handleIncrement = counter => {
-    const counters = [...this.state.counters];
+    const counters = [...this.state.counters]; //the spread operator is used on array
     const index = counters.indexOf(counter);
-    counters[index] = { ...counter };
+    counters[index] = { ...counter }; //the spread operator is used on object
     counters[index].value++;
     this.setState({ counters });
   };
